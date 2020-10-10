@@ -44,14 +44,16 @@ const fields = [
 const BasicForm = () => {
   const classes = useStyles();
 
+  const formik = {
+    onSubmit: async (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  };
+
   return (
     <FormFormik
       fields={fields}
-      formik={{
-        onSubmit: async (values) => {
-          alert(JSON.stringify(values, null, 2));
-        }
-      }}
+      formik={formik}
     >
       <Form className={classes.basicRoot}>
         <FieldsContext />

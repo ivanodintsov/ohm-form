@@ -1,0 +1,61 @@
+{
+  "name": "ohm-form-formik",
+  "description": "Ohm Forms in React",
+  "version": "0.0.11-alpha.0",
+  "license": "MIT",
+  "author": "Ivan Odyntsov <ivan@odintsov.me>",
+  "repository": "ivanodintsov/ohm-form",
+  "keywords": [
+    "ohm-form-formik",
+    "ohm-form",
+    "formik",
+    "react",
+    "react-dom",
+    "form",
+    "hooks",
+    "validation",
+    "forms",
+    "higher order component",
+    "hoc"
+  ],
+  "main": "dist/index.js",
+  "umd:main": "dist/ohm-form-formik.umd.production.js",
+  "module": "dist/ohm-form-formik.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "formik": ">=2.1.7",
+    "ohm-form": ">=0.0.3-alpha.0",
+    "react": ">=16.8.0",
+    "yup": ">=0.28.1"
+  },
+  "scripts": {
+    "test": "tsdx test --env=jsdom",
+    "test:watch": "npm run test -- --watchAll",
+    "start": "tsdx watch --tsconfig tsconfig.build.json --verbose --noClean",
+    "build": "tsdx build --tsconfig tsconfig.build.json",
+    "lint": "tsdx lint",
+    "prepublish": "npm run build"
+  },
+  "dependencies": {
+    "ramda": "^0.27.1",
+    "tslib": "^1.10.0"
+  },
+  "resolutions": {
+    "@types/react": "16.9.17",
+    "@types/react-dom": "16.9.4"
+  },
+  "devDependencies": {
+    "@types/ramda": "^0.27.20",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "@types/yup": "^0.24.9",
+    "formik": "^2.1.7",
+    "ohm-form": "^0.0.1-alpha.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "yup": "^0.28.1"
+  }
+}

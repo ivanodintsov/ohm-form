@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": ["packages"],
+  "compilerOptions": {
+    "allowJs": false,
+    "baseUrl": ".",
+    "paths": {
+      "ohm-form/*": ["packages/ohm-form/src/*"],
+      "ohm-form": ["packages/ohm-form/src"],
+      "ohm-form-formik": ["packages/ohm-form-formik/src"]
+    }
+  }
+}

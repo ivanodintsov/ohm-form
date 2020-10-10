@@ -1,7 +1,7 @@
 {
   "name": "ohm-form-formik",
   "description": "Ohm Forms in React",
-  "version": "0.0.11-alpha.0",
+  "version": "0.1.0",
   "license": "MIT",
   "author": "Ivan Odyntsov <ivan@odintsov.me>",
   "repository": "ivanodintsov/ohm-form",

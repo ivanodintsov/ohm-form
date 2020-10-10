@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { Form } from 'formik';
 import { FormFormik, FieldsContext } from 'ohm-form-formik';
-import { TextField, CheckboxWithLabel } from 'formik-material-ui';
+import { TextField } from 'formik-material-ui';
 import Button from '@material-ui/core/Button';
+import Checkbox from './Checkbox';
 import { useStyles } from './styles';
 
 const formComponents = {
   input: TextField,
-  checkbox: CheckboxWithLabel,
+  checkbox: Checkbox,
 };
 
 const fields = {
@@ -72,9 +73,14 @@ const fields = {
         id: 'privacyPolicy',
         name: 'privacyPolicy',
         type: 'checkbox',
-        Label: {
-          label: (<>I have read and agree to the <a href='#' target='_blank'>Privacy Policy</a></>)
-        },
+        label: (
+          <>
+            I have read and agree to the{" "}
+            <a href="#" target="_blank">
+              Privacy Policy
+            </a>
+          </>
+        )
       },
       validation: {
         type: 'boolean',

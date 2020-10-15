@@ -17,6 +17,8 @@
 - [Validation](https://codesandbox.io/s/github/ivanodintsov/ohm-form/tree/main/examples/FormWithValidation?file=/src/FormWithValidation.tsx)
 - [Scopes](https://codesandbox.io/s/github/ivanodintsov/ohm-form/tree/main/examples/ScopedForm?file=/src/ScopedForm.tsx)
 - [Form components](https://codesandbox.io/s/github/ivanodintsov/ohm-form/tree/main/examples/FormComponents?file=/src/FormComponents.tsx)
+- [Form with radio](https://codesandbox.io/s/github/ivanodintsov/ohm-form/tree/main/examples/FormRadio?file=/src/FormRadio.tsx)
+- [Form with select](https://codesandbox.io/s/github/ivanodintsov/ohm-form/tree/main/examples/FormSelect?file=/src/FormSelect.tsx)
 
 ## Related
 

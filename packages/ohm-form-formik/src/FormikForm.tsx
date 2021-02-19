@@ -7,8 +7,13 @@ import { createInitialValues } from './formikUtils';
 
 const FormikWithForm: React.FC<FormikWithFormProps> = (props) => {
   const context = useFormContext<FieldsMixedType>();
-  const schema = createValidationSchema(context.fields);
-  const initialValues = createInitialValues(context.fields);
+  const schema = React.useMemo(() => createValidationSchema(context.fields), [
+    context.fields,
+  ]);
+  const initialValues = React.useMemo(
+    () => createInitialValues(context.fields),
+    [context.fields]
+  );
 
   return (
     <Formik
@@ -19,18 +24,14 @@ const FormikWithForm: React.FC<FormikWithFormProps> = (props) => {
   );
 };
 
-export function FormFormik<
-  Values extends FieldsMixedType
->(props: FormFormikProps<Values>) {
+export function FormFormik<Values extends FieldsMixedType>(
+  props: FormFormikProps<Values>
+) {
   const { children, formik, ...rest } = props;
 
   return (
     <Form {...rest} fieldComponent={Field}>
-      <FormikWithForm
-        {...formik}
-      >
-        {children}
-      </FormikWithForm>
+      <FormikWithForm {...formik}>{children}</FormikWithForm>
     </Form>
   );
-};
+}
